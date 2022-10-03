@@ -3,12 +3,15 @@ package com.cydeo.model;
 import com.cydeo.enums.Cheese;
 import com.cydeo.enums.Sauce;
 import com.cydeo.enums.Topping;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 import java.util.UUID;
 
 @Data
+
 public class Pizza {
 
     private UUID id;
@@ -16,4 +19,7 @@ public class Pizza {
     private List<Sauce> sauceList;
     private List<Topping> toppingList;
 
+    public Pizza() {
+        this.id = UUID.randomUUID();
+    }
 }

@@ -1,10 +1,16 @@
 package com.cydeo.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.UUID;
 
 @Data
+
 public class PizzaOrder {
 
+    private UUID id;
     private String deliveryName;
     private String deliveryStreet;
     private String deliveryCity;
@@ -15,4 +21,7 @@ public class PizzaOrder {
     private String ccCVV;
     private Pizza pizza;
 
+    public PizzaOrder() {
+        this.id = UUID.randomUUID();
+    }
 }
